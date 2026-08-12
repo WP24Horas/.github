@@ -24,6 +24,8 @@ Os projetos públicos priorizam problemas concretos do desenvolvimento WordPress
 
 Não buscamos quantidade de repositórios. Preferimos manter poucos projetos com documentação clara, responsabilidade definida e espaço real para contribuição.
 
+> Repositórios explicitamente marcados como **legacy**, **historical** ou **experimental** são preservados apenas como material histórico e não representam a baseline técnica atual da WP24Horas.
+
 ## Projeto em destaque
 
 ### [WP24H Plugin Boilerplate](https://github.com/WP24Horas/wp24h-plugin-boilerplate)
