@@ -20,6 +20,7 @@ Os projetos públicos priorizam problemas concretos do desenvolvimento WordPress
 - testes e análise estática;
 - metadados de distribuição e `readme.txt`;
 - automação editorial e integração com Markdown;
+- geração segura de novos projetos e módulos;
 - exemplos pequenos o suficiente para estudar, mas estruturados para refletir práticas de produção.
 
 Não buscamos quantidade de repositórios. Preferimos manter poucos projetos com documentação clara, responsabilidade definida e espaço real para contribuição.
@@ -30,9 +31,40 @@ Não buscamos quantidade de repositórios. Preferimos manter poucos projetos com
 
 ### [WP24H Plugin Boilerplate](https://github.com/WP24Horas/wp24h-plugin-boilerplate)
 
-Base modular e configurável para plugins WordPress profissionais, com Settings API, REST, módulos extensíveis, PHPCS, PHPStan, PHPUnit, `wp-env` e tooling de release.
+Base modular e configurável para plugins WordPress profissionais.
 
-O repositório também pode ser usado como **template** para iniciar novos plugins.
+O projeto inclui:
+
+- Settings API e módulos independentes;
+- exemplos REST públicos e protegidos;
+- módulo opcional de Site Health;
+- PHPCS, PHPStan, PHPUnit e Brain Monkey;
+- ambiente local opcional com `wp-env`;
+- scaffolder que gera um plugin novo com identidade própria;
+- `composer make:module` para gerar classe + teste de novos módulos;
+- smoke test que valida o fluxo **boilerplate → plugin → módulo**;
+- build reproduzível de ZIP e processo de release documentado;
+- validação local-first sem depender de GitHub Actions em cada push.
+
+O repositório também é configurado como **template repository**.
+
+## Fluxo recomendado
+
+```text
+WP24H Plugin Boilerplate
+        ↓
+scaffold de um plugin novo
+        ↓
+composer make:module
+        ↓
+composer check
+        ↓
+WP Plugin Readme Validator
+        ↓
+ZIP / release
+```
+
+A intenção é cobrir o ciclo de desenvolvimento, não apenas entregar uma estrutura inicial de arquivos.
 
 ## Ferramentas relacionadas
 
@@ -46,6 +78,7 @@ Alguns projetos relacionados ainda são mantidos no perfil do mantenedor enquant
 - **WordPress-native first:** usar APIs do core antes de inventar abstrações desnecessárias.
 - **Security by default:** capability checks, nonces, permission callbacks, sanitização e escaping fazem parte do exemplo, não de uma etapa posterior.
 - **Local-first validation:** testes, lint e análise estática devem poder rodar localmente sem depender de CI pago.
+- **Generated code must be testable:** ferramentas que geram código também precisam provar a qualidade do que produzem.
 - **Explicit trade-offs:** documentação deve explicar por que uma abordagem foi escolhida e onde ela deixa de ser adequada.
 - **Safe extension points:** código gerado ou de exemplo não deve incentivar sobrescrever customizações sem uma fronteira clara.
 
@@ -61,6 +94,10 @@ Antes de contribuir:
 4. não inclua credenciais, dados de clientes ou código comercial privado.
 
 Relatos de segurança devem seguir o `SECURITY.md` específico de cada projeto, em vez de serem publicados como issue explorável.
+
+## Open-source portfolio
+
+Para uma visão mais ampla dos projetos e contribuições upstream do mantenedor, consulte o [open-source portfolio de Asllan Maciel](https://github.com/asllanmaciel/asllanmaciel/blob/main/OPEN_SOURCE.md).
 
 ## Sobre a WP24Horas
 
