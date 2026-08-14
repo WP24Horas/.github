@@ -1,0 +1,37 @@
+name: Feature request
+description: Propose a focused improvement for a WP24Horas open-source project.
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: Explain the user/developer problem before proposing implementation details.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed outcome
+      description: Describe what good behavior would look like.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Optional. Mention workarounds, existing extension points or trade-offs.
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility and maintenance impact
+      description: Note any WordPress/PHP/runtime compatibility, migration or long-term maintenance considerations.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-submission checks
+      options:
+        - label: I searched existing issues and pull requests for similar work.
+          required: true
+        - label: This request does not require publishing client/private product code.
+          required: true
