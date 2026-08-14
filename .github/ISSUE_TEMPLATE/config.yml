@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerabilities
+    url: https://github.com/WP24Horas/.github/security
+    about: Do not disclose exploitable vulnerability details in a public issue. Review the repository security policy first.
