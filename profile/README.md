@@ -43,7 +43,8 @@ O projeto inclui:
 - scaffolder que gera um plugin novo com identidade própria;
 - `composer make:module` para gerar classe + teste de novos módulos;
 - smoke test que valida o fluxo **boilerplate → plugin → módulo**;
-- build reproduzível de ZIP e processo de release documentado;
+- build e verificação reproduzíveis de ZIP em Bash e PowerShell;
+- processo de release local-first e documentado;
 - validação local-first sem depender de GitHub Actions em cada push.
 
 O repositório também é configurado como **template repository**.
@@ -61,7 +62,7 @@ composer check
         ↓
 WP Plugin Readme Validator
         ↓
-ZIP / release
+ZIP verificado / release
 ```
 
 A intenção é cobrir o ciclo de desenvolvimento, não apenas entregar uma estrutura inicial de arquivos.
@@ -72,6 +73,20 @@ Alguns projetos relacionados ainda são mantidos no perfil do mantenedor enquant
 
 - **[WP Plugin Readme Validator](https://github.com/asllanmaciel/wp-plugin-readme-validator)** — CLI e GitHub Action para validar consistência entre o cabeçalho principal do plugin e o `readme.txt`.
 - **[WP24H MD Importer](https://github.com/asllanmaciel/wp24h-md-importer)** — importação de Markdown + front matter para WordPress, com mídia destacada, taxonomias, SEO e REST autenticada opcional.
+
+## Baseline comunitária
+
+O repositório público [`WP24Horas/.github`](https://github.com/WP24Horas/.github) fornece a baseline de community health da organização:
+
+- guia padrão de contribuição;
+- política de segurança;
+- política de suporte;
+- código de conduta;
+- governança;
+- template de pull request;
+- formulários de bug e feature request.
+
+Repositórios podem manter regras mais específicas quando necessário; os arquivos padrão existem para que projetos novos não comecem sem governança mínima.
 
 ## Princípios de engenharia
 
@@ -88,12 +103,12 @@ Issues e pull requests são bem-vindos quando melhoram um problema concreto do p
 
 Antes de contribuir:
 
-1. leia o `CONTRIBUTING.md` do repositório;
+1. leia o `CONTRIBUTING.md` do repositório ou o padrão da organização;
 2. procure issues marcadas como `good first issue` ou `help wanted`;
 3. mantenha a mudança focada e testável;
 4. não inclua credenciais, dados de clientes ou código comercial privado.
 
-Relatos de segurança devem seguir o `SECURITY.md` específico de cada projeto, em vez de serem publicados como issue explorável.
+Relatos de segurança devem seguir o `SECURITY.md` do projeto ou, quando ele não existir, a política padrão da organização — nunca uma issue pública com detalhes exploráveis.
 
 ## Open-source portfolio
 
