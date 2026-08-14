@@ -33,6 +33,10 @@ Não buscamos quantidade de repositórios. Preferimos manter poucos projetos com
 
 Base modular e configurável para plugins WordPress profissionais.
 
+**Release estável atual: [v1.0.0](https://github.com/WP24Horas/wp24h-plugin-boilerplate/releases/tag/v1.0.0)**
+
+A primeira release estável passou pelos gates documentados de clean checkout, análise estática, testes, scaffold completo, runtime WordPress, plugin gerado, verificação estrutural do ZIP e instalação limpa do artefato.
+
 O projeto inclui:
 
 - Settings API e módulos independentes;
